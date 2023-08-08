@@ -84,7 +84,7 @@ const Logistration = (props) => {
 
   return (
     <BaseContainer>
-      <div>
+      <div style={{display:"none"}}>
         {disablePublicAccountCreation
           ? (
             <>
