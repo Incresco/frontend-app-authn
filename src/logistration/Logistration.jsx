@@ -70,9 +70,9 @@ const Logistration = (props) => {
     <div className="d-flex">
       <Icon src={ChevronLeft} className="left-icon" />
       <span className="ml-2">
-        {selectedPage === LOGIN_PAGE
+        {/* {selectedPage === LOGIN_PAGE */}
           ? formatMessage(messages['logistration.sign.in'])
-          : formatMessage(messages['logistration.register'])}
+          {/* // : formatMessage(messages['logistration.register'])} */}
       </span>
     </div>
   );
