@@ -537,7 +537,7 @@ const RegistrationPage = (props) => {
     return (
       <>
         <Helmet>
-          <title>{formatMessage(messages['register.page.title'], { siteName: getConfig().SITE_NAME })}</title>
+          {/* <title>{formatMessage(messages['register.page.title'], { siteName: getConfig().SITE_NAME })}</title> */}
         </Helmet>
         <RedirectLogistration
           host={host}
