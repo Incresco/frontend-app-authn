@@ -107,7 +107,7 @@ const Logistration = (props) => {
               {institutionLogin
                 ? (
                   <Tabs defaultActiveKey="" id="controlled-tab" onSelect={handleInstitutionLogin}>
-                    <Tab title={tabTitle} eventKey={selectedPage === LOGIN_PAGE ? LOGIN_PAGE : REGISTER_PAGE} />
+                    <Tab title={tabTitle} eventKey={LOGIN_PAGE} />
                   </Tabs>
                 )
                 : (!isValidTpaHint() && (
