@@ -14,7 +14,7 @@ const messages = defineMessages({
   },
   'login.password.label': {
     id: 'login.password.label',
-    defaultMessage: 'Password',
+    defaultMessage: 'Pass',
     description: 'Label for password field',
   },
   'sign.in.button': {
