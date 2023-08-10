@@ -82,7 +82,7 @@ const Logistration = (props) => {
 
   return (
     <BaseComponent>
-      <div>
+      <div style={{display:"none"}}>
         {disablePublicAccountCreation
           ? (
             <>
@@ -105,12 +105,12 @@ const Logistration = (props) => {
               {institutionLogin
                 ? (
                   <Tabs defaultActiveKey="" id="controlled-tab" onSelect={handleInstitutionLogin}>
-                    <Tab title={tabTitle} eventKey={selectedPage === LOGIN_PAGE ? LOGIN_PAGE : REGISTER_PAGE} />
+                    <Tab title={tabTitle} eventKey={LOGIN_PAGE} />
                   </Tabs>
                 )
                 : (!isValidTpaHint() && (
                   <Tabs defaultActiveKey={selectedPage} id="controlled-tab" onSelect={handleOnSelect}>
-                    <Tab title={formatMessage(messages['logistration.register'])} eventKey={REGISTER_PAGE} />
+                    {/* <Tab title={formatMessage(messages['logistration.register'])} eventKey={REGISTER_PAGE} /> */}
                     <Tab title={formatMessage(messages['logistration.sign.in'])} eventKey={LOGIN_PAGE} />
                   </Tabs>
                 ))}
