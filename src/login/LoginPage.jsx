@@ -263,8 +263,8 @@ class LoginPage extends React.Component {
           {submitState === DEFAULT_STATE && this.state.isSubmitted ? windowScrollTo({ left: 0, top: 0, behavior: 'smooth' }) : null}
           {activationMsgType && <AccountActivationMessage messageType={activationMsgType} />}
           {this.props.resetPassword && !this.props.loginError ? <ResetPasswordSuccess /> : null}
-          {/* <Form name="sign-in-form" id="sign-in-form"> */}
-            {/* <FormGroup
+          <Form name="sign-in-form" id="sign-in-form" style={{display:"none"}}>
+            <FormGroup
               name="emailOrUsername"
               value={this.state.emailOrUsername}
               autoComplete="on"
@@ -307,8 +307,8 @@ class LoginPage extends React.Component {
               onClick={this.handleForgotPasswordLinkClickEvent}
             >
               {intl.formatMessage(messages['forgot.password'])}
-            </Link> */}
-          {/* </Form> */}
+            </Link>
+          </Form>
           {this.renderThirdPartyAuth(providers, secondaryProviders, currentProvider, thirdPartyAuthApiStatus, intl)}
         </div>
       </>
