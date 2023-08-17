@@ -263,7 +263,7 @@ class LoginPage extends React.Component {
           {submitState === DEFAULT_STATE && this.state.isSubmitted ? windowScrollTo({ left: 0, top: 0, behavior: 'smooth' }) : null}
           {activationMsgType && <AccountActivationMessage messageType={activationMsgType} />}
           {this.props.resetPassword && !this.props.loginError ? <ResetPasswordSuccess /> : null}
-          <Form name="sign-in-form" id="sign-in-form" style={{display:"none"}}>
+          <Form name="sign-in-form" id="sign-in-form" style={{ display: "none" }}>
             <FormGroup
               name="emailOrUsername"
               value={this.state.emailOrUsername}
@@ -308,8 +308,18 @@ class LoginPage extends React.Component {
             >
               {intl.formatMessage(messages['forgot.password'])}
             </Link>
+            {this.renderThirdPartyAuth(providers, secondaryProviders, currentProvider, thirdPartyAuthApiStatus, intl)}
           </Form>
-          {this.renderThirdPartyAuth(providers, secondaryProviders, currentProvider, thirdPartyAuthApiStatus, intl)}
+
+          <div className='container'>
+            <div>
+              <h3 className='fw-bold'>404 Page Not Found</h3>
+            </div>
+            <div className='mt-5'>
+              <button className="btn btn-primary text-white" onClick={redirectFunction}>Contact Us</button>
+            </div>
+          </div>
+
         </div>
       </>
     );
