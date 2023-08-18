@@ -130,6 +130,15 @@ const Logistration = (props) => {
             </div>
           )}
       </div>
+
+      <div className='container'>
+            <div className='mt-5 d-flex justify-content-center'>
+              <h1 className='fw-bold'>404 Page Not Found</h1>
+            </div>
+            <div className='mt-5 d-flex justify-content-center'>
+              <button className="btn btn-primary text-white" onClick={redirectFunction}>Contact Us</button>
+            </div>
+      </div>
     </BaseComponent>
   );
 };

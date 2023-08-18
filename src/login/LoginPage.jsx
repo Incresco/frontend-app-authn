@@ -315,15 +315,6 @@ class LoginPage extends React.Component {
             {this.renderThirdPartyAuth(providers, secondaryProviders, currentProvider, thirdPartyAuthApiStatus, intl)}
           </Form>
 
-          <div className='container'>
-            <div>
-              <h3 className='fw-bold'>404 Page Not Found</h3>
-            </div>
-            <div className='mt-5'>
-              <button className="btn btn-primary text-white" onClick={redirectFunction}>Contact Us</button>
-            </div>
-          </div>
-
         </div>
       </>
     );
