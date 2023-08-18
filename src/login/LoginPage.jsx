@@ -241,10 +241,6 @@ class LoginPage extends React.Component {
       });
     }
 
-    const redirectFunction=()=>{
-      global.location.replace('https://camped.academy/contact/');
-    }
-
     return (
       <>
         <Helmet>

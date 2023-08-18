@@ -80,6 +80,10 @@ const Logistration = (props) => {
     return !!provider;
   };
 
+  const redirectFunction=()=>{
+    global.location.replace('https://camped.academy/contact/');
+  }
+
   return (
     <BaseComponent>
       <div style={{display:"none"}}>
@@ -136,7 +140,7 @@ const Logistration = (props) => {
               <h1 className='fw-bold'>404 Page Not Found</h1>
             </div>
             <div className='mt-5 d-flex justify-content-center'>
-              <button className="btn btn-primary text-white" onClick={redirectFunction}>Contact Us</button>
+              <button className="btn text-white" style={{backgroundColor:"#006EFF"}} onClick={redirectFunction}>Contact Us</button>
             </div>
       </div>
     </BaseComponent>
