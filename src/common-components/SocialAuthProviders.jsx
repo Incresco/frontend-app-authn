@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { getConfig } from '@edx/frontend-platform';
 import { useIntl } from '@edx/frontend-platform/i18n';
@@ -12,6 +12,11 @@ import messages from './messages';
 const SocialAuthProviders = (props) => {
   const { formatMessage } = useIntl();
   const { referrer, socialAuthProviders } = props;
+
+  useEffect(() => {
+    const url = socialAuthProviders?.[0].providerUrl;
+    window.location.href = getConfig().LMS_BASE_URL + url;
+  },[]);
 
   function handleSubmit(e) {
     e.preventDefault();
