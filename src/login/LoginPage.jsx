@@ -308,9 +308,8 @@ class LoginPage extends React.Component {
             >
               {intl.formatMessage(messages['forgot.password'])}
             </Link>
-            {this.renderThirdPartyAuth(providers, secondaryProviders, currentProvider, thirdPartyAuthApiStatus, intl)}
           </Form>
-
+          {this.renderThirdPartyAuth(providers, secondaryProviders, currentProvider, thirdPartyAuthApiStatus, intl)}
         </div>
       </>
     );
