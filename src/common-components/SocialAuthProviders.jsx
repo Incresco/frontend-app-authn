@@ -23,7 +23,7 @@ const SocialAuthProviders = (props) => {
   useEffect(()=>{
     console.log("Inside useEffect");
     const lmsUrl = getConfig().LMS_BASE_URL;
-    global.location.replace(lmsUrl+'getConfig().LMS_BASE_URL/auth/login/cognito/?auth_entry=register&next=%2Fdashboard');
+    global.location.replace(lmsUrl+'/auth/login/cognito/?auth_entry=register&next=%2Fdashboard');
   },[])
 
   const socialAuth = socialAuthProviders.map((provider, index) => {
