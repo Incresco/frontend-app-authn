@@ -167,7 +167,7 @@ class LoginPage extends React.Component {
     const isInstitutionAuthActive = !!secondaryProviders.length && !currentProvider;
     const isSocialAuthActive = !!providers.length && !currentProvider;
     const isEnterpriseLoginDisabled = getConfig().DISABLE_ENTERPRISE_LOGIN;
-
+    console.log("Inside render TPA");
     return (
       <>
         {(isSocialAuthActive || (isEnterpriseLoginDisabled && isInstitutionAuthActive))
@@ -308,9 +308,8 @@ class LoginPage extends React.Component {
             >
               {intl.formatMessage(messages['forgot.password'])}
             </Link>
-            {this.renderThirdPartyAuth(providers, secondaryProviders, currentProvider, thirdPartyAuthApiStatus, intl)}
           </Form>
-
+          {this.renderThirdPartyAuth(providers, secondaryProviders, currentProvider, thirdPartyAuthApiStatus, intl)}
         </div>
       </>
     );

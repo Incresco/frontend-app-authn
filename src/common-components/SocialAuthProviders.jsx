@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { getConfig } from '@edx/frontend-platform';
 import { useIntl } from '@edx/frontend-platform/i18n';
@@ -15,12 +15,19 @@ const SocialAuthProviders = (props) => {
 
   function handleSubmit(e) {
     e.preventDefault();
-
+    console.log("Inside social auth");
     const url = e.currentTarget.dataset.providerUrl;
     window.location.href = getConfig().LMS_BASE_URL + url;
   }
 
-  const socialAuth = socialAuthProviders.map((provider, index) => (
+  useEffect(()=>{
+    console.log("Inside useEffect");
+    console.log(provider);
+  },[])
+
+  const socialAuth = socialAuthProviders.map((provider, index) => {
+    console.log(provider);
+    return (
     <button
       id={provider.id}
       key={provider.id}
@@ -48,7 +55,7 @@ const SocialAuthProviders = (props) => {
           : formatMessage(messages['sso.create.account.using'], { providerName: provider.name })}
       </span>
     </button>
-  ));
+  )});
 
   // eslint-disable-next-line react/jsx-no-useless-fragment
   return <>{socialAuth}</>;
